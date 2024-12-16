@@ -4,10 +4,12 @@
 #include <conio.h>
 #include <math.h>
 #include <time.h>
+#include <Windows.h>
 
 
 
 int main() {
+	srand(time(NULL));
 	char grille[46][46];
 
 	int n = 46;
@@ -16,7 +18,13 @@ int main() {
 			grille[i][j] = ' ';
 		}
 	}
+	
 	initialisation(grille, n);
-	return 0;
+	//while (1) {
+	//	afficheGrille(grille, n);
+	//	system("cls"); 
+	//	// mettre un sleep 
+	//}
 
+	return 0;
 }
