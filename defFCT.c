@@ -27,22 +27,40 @@ void afficheGrille(char grille[46][46], int n) {
 	
 }
 void nourriture(char grille[46][46]) {
-   
-    int i = (rand() % 44) + 2;
-    int j = (rand() % 44) + 2;
+    int i;
+    int j;
+    while (grille[i][j] != ' ') {
+        i = (rand() % 44) + 2;
+         j = (rand() % 44) + 2;
+    }
     grille[i][j] = '*';
     
 
 }
-void initialisation(char grille[46][46],int n) {
+void initialisation(char grille[46][46],int n, int teteX, int teteY) {
 
-    
-	grille[20][10] = 'O';
-	grille[20][11] = 'O';
-	grille[20][12] = 'O';
+    teteX = 20; // a utilisé pour facilité le deplacement
+    teteY = 10;
+	grille[teteX][teteY] = 'O';
+	grille[20][11] = '¤';
+	grille[20][12] = '¤';
     nourriture(grille);
     afficheGrille(grille, n);
     
 	
+}
+
+int verificationManger(char grille[46][46], int n, int teteX, int teteY, int longueur) {
+    if (grille[teteX][teteY] == '*') {
+        longueur++;
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+int verificationCollision(char grille[46][46], int n, int teteX, int teteY, int longueur) {
+
 }
 

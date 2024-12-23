@@ -13,6 +13,7 @@ int main() {
 	char grille[46][46];
 
 	int n = 46;
+	int longueur = 3;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			grille[i][j] = ' ';
