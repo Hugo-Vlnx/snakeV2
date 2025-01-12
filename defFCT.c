@@ -57,12 +57,12 @@ int deplacementSnake(char grille[46][46], int n, int teteX, int teteY, int dirX,
         return 0;        		// si le serpent touche la grille sa arrete le jeu -martin
 
     if (grille[newX][newY] == '*') {
-        (longueur)++;
-        nourriture(grille);
+        (longueur)++;			// augmente la taille du serpent quand il mange la pomme
+        nourriture(grille);		// Génère une nouvelle pomme sur la grille
     }
 
-    grille[newX][newY] = 'O';
-    grille[teteX][teteY] = '¤';
+    grille[newX][newY] = 'O';		//La nouvelle position de la tête devient
+    grille[teteX][teteY] = '¤';		// L'ancienne position de la tête devient une partie du corps
 
     teteX = newX;
     teteY = newY;		// si le serpent ne touche rien grandit le serpent et la tete grandit 
