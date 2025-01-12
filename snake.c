@@ -20,12 +20,14 @@ int main() {
 		}
 	}
 	
-	initialisation(grille, n);
+	initialisation(grille, n,nourriture);
 	//while (1) {
 	//	afficheGrille(grille, n);
 	//	system("cls"); 
-	//	// mettre un sleep 
+	//	afficherPomme (char grille[46][46]);
+	sleep (300);
 	//}
+	
 
 	return 0;
 }
