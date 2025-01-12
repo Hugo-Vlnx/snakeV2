@@ -31,7 +31,17 @@ int main() {
 		afficherPomme (char grille[46][46]);
 	sleep (300);
 	}
-	
+	while (jeuEnCours) {
+        
+        if (_kbhit()) {
+            char touche = _getch();
+            switch (touche) {
+                case 'z': dirX = -1; dirY = 0; break; 
+                case 's': dirX = 1; dirY = 0; break;  
+                case 'q': dirX = 0; dirY = -1; break; 
+                case 'd': dirX = 0; dirY = 1; break;  
+            }
+        }
 
 	return 0;
 }
