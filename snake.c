@@ -28,7 +28,7 @@ int main() {
 	while (1) {
 		afficheGrille(grille, n);
 		system("cls"); 
-		afficherPomme (char grille[46][46]);
+		afficherNourriture (char grille[46][46]);
 	sleep (300);
 	}
 	while (jeuEnCours) {
