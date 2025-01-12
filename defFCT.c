@@ -39,7 +39,7 @@ void nourriture(char grille[46][46]) {
 }
 void initialisation(char grille[46][46],int n, int teteX, int teteY) {
 
-    teteX = 20; // a utilisé pour facilité le deplacement _H
+    teteX = 20; // a utilisé pour facilité le deplacement -hugo
     teteY = 10;
 	grille[teteX][teteY] = 'O';
 	grille[20][11] = '¤';
@@ -70,10 +70,25 @@ int deplacementSnake(char grille[46][46], int n, int teteX, int teteY, int dirX,
     return 1; 
 	    
 }
+
+ int deplacerSnake(char grille[46][46], int n, int teteX, int teteY, int longueur) {
+     if (_kbhit()) { 
+         switch (_getch()) {
+         case 'w':
+             teteX;
+         case 'd': 
+             dir = 1;
+         case 's':
+             dir = 2; 
+         case 'a': 
+             dir = 3;
+
+    }
+
 int verificationManger(char grille[46][46], int n, int teteX, int teteY, int longueur) {
     if (grille[teteX][teteY] == '*') {
         longueur++;
-        grille[teteX][teteY] = 'O'; // il va falloir faire en sorte que on place la pomme apres avoir placé le serpent _H
+        grille[teteX][teteY] = 'O'; // il va falloir faire en sorte que on place la pomme apres avoir placé le serpent -hugo
         return longueur;
     }
     else {
@@ -82,7 +97,7 @@ int verificationManger(char grille[46][46], int n, int teteX, int teteY, int lon
 }
 
 int verificationCollision(char grille[46][46], int n, int teteX, int teteY, int longueur) {
-    if (grille[teteX][teteY] != '*' && grille[teteX][teteY] != ' ' && grille[teteX][teteY] != 'O') { // pareil trouver un moyen de placer terrain a chque fois apres le serpent est bougé
+    if (grille[teteX][teteY] != '*' && grille[teteX][teteY] != ' ' && grille[teteX][teteY] != 'O') { // pareil trouver un moyen de placer terrain a chque fois apres le serpent est bougé -hugo
         return 1;
     }
     else {
