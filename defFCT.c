@@ -54,7 +54,7 @@ int deplacementSnake(char grille[46][46], int n, int teteX, int teteY, int dirX,
     int newY = teteY + dirY;
 
     if (grille[newX][newY] == '#') {
-        return 0; 
+        return 0;        		// si le serpent touche la grille sa arrete le jeu -martin
 
     if (grille[newX][newY] == '*') {
         (longueur)++;
@@ -65,7 +65,7 @@ int deplacementSnake(char grille[46][46], int n, int teteX, int teteY, int dirX,
     grille[teteX][teteY] = '¤';
 
     teteX = newX;
-    teteY = newY;
+    teteY = newY;		// si le serpent ne touche rien grandit le serpent et la tete grandit 
 
     return 1; 
 	    
