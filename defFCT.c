@@ -71,20 +71,6 @@ int deplacementSnake(char grille[46][46], int n, int teteX, int teteY, int dirX,
 	    
 }
 
- int deplacerSnake(char grille[46][46], int n, int teteX, int teteY, int longueur) {
-     if (_kbhit()) { 
-         switch (_getch()) {
-         case 'w':
-             teteX;
-         case 'd': 
-             dir = 1;
-         case 's':
-             dir = 2; 
-         case 'a': 
-             dir = 3;
-
-    }
-
 int verificationManger(char grille[46][46], int n, int teteX, int teteY, int longueur) {
     if (grille[teteX][teteY] == '*') {
         longueur++;
